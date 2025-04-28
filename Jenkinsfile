@@ -24,10 +24,10 @@ pipeline {
         stage('Push image to Docker Hub'){
             steps{
                 script{
-                   withCredentials([string(credentialsId: 'docker-credentials', variable: 'password')]) {
-                        bat 'docker login -u gabrielcq -p %password%'
-                   }
-                   bat 'docker push gabrielcq/kartingrm-frontend'
+                    withCredentials([usernamePassword(credentialsId: 'docker-credentials', usernameVariable: 'docker-user', passwordVariable: 'docker-pass')]) {
+                         bat "docker build -t gabrielcq/kartingrm-frontend ."
+                         bat 'docker login -u %docker-user% -p %docker-pass%'
+                         bat "docker push gabrielcq/kartingrm-frontend"
                 }
             }
         }
