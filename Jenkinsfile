@@ -24,7 +24,7 @@ pipeline {
         stage('Push image to Docker Hub'){
             steps{
                 script{
-                   withCredentials([string(credentialsId: 'docker-credentials	', variable: 'password')]) {
+                   withCredentials([string(credentialsId: 'docker-credentials', variable: 'password')]) {
                         bat 'docker login -u gabrielcq -p %password%'
                    }
                    bat 'docker push gabrielcq/kartingrm-frontend'
