@@ -10,6 +10,8 @@ const Home = () => {
           el backend), <a href="https://reactjs.org/">React</a> (para el Frontend)
           y <a href="https://www.postgresql.org/download/">PostgresSQL</a> (para la
           base de datos).
+
+          HOLA MUNDO MUNDIAL
         </p>
       </div>
       
