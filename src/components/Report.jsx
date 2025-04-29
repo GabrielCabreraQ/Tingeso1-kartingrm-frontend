@@ -186,7 +186,7 @@ function ReportPage() {
         <Container maxWidth="md" sx={{ mt: 2, mb: 4 }}>
             <Paper sx={{ p: { xs: 1, sm: 2 }, display: 'flex', flexDirection: 'column' }}>
                 <Typography variant="h5" component="h2" gutterBottom sx={{ textAlign: 'center' }}>
-                    Generar y Descargar Reportes
+                    reportes 2025
                 </Typography>
 
                 {/* Formulario de Generación */}
